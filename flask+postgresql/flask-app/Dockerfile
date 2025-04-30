@@ -1,5 +1,5 @@
 # Identify the baseimage
-FROM circleci/python
+FROM python:alpine
 
 WORKDIR /app
 
