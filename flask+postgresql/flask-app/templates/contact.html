@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Contact{% endblock %}
+{% block content %}
+<h1><i class="fas fa-envelope"></i> Contact</h1>
+<p>Feel free to contact us on abdo@example.com</p>
+<form method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" required></textarea><br><br>
+
+    <button type="submit">Send</button>
+</form>
+{% endblock %}

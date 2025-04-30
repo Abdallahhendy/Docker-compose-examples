@@ -1,0 +1,19 @@
+services:
+  flask-web:
+    depends_on:
+      - postgresql
+    build: ./flask-app
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env.dev
+    
+  postgresql:
+    image: postgres
+    env_file:
+      - .env.dev
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
